@@ -1,0 +1,48 @@
+.scrollbar{
+    // &:focus-within{
+    //     &::-webkit-scrollbar{
+    //         width: 10px;
+    //     }
+    // }
+    &::-webkit-scrollbar-track {  /*外层轨道*/
+        box-shadow: none;
+        // border-radius: 2px;
+        // background-color: rgba(255, 255, 255, 0.1);
+        background:transparent;
+      }
+      &::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+        overflow: overlay;
+        background:transparent;
+        
+    }
+    &::-webkit-scrollbar-thumb {  /*滚动的滑块*/
+        
+        border-style: solid;
+        border-color: transparent;
+        border-width: 1px;
+        background-clip: padding-box;
+        border-radius: 3px;
+        background-color: rgba(255, 255, 255, 0.5);
+        &:hover{
+            background:rgba(255, 255, 255, 0.5);
+        }
+      }
+      &:hover::-webkit-scrollbar{
+        width: 6px; 
+        height: 6px; 
+         
+    }
+    &::-webkit-scrollbar-thumb {  /*滚动的滑块*/
+     border-radius: 4px;
+    }
+    &.scrollbar-bgc{
+        &::-webkit-scrollbar-thumb{
+            background-color: rgba(58, 65, 80, 0.3);
+            &:hover{
+                background:rgba(58, 65, 80, 0.3);
+            }
+        }
+    }
+}
